@@ -13,6 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelector(this.getAttribute('href')).scrollIntoView({
         behavior: 'smooth'
       });
+
+      // Hide mobile menu on link click
+      if (!mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+      }
     });
   });
 });
