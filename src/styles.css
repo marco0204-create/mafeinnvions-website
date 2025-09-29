@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-fade-up {
+    @apply transition-all duration-700 ease-out;
+    animation: fadeUp 1s forwards;
+  }
+
+  .delay-150 { animation-delay: 0.15s; }
+  .delay-300 { animation-delay: 0.3s; }
+}
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}

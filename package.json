@@ -1,0 +1,16 @@
+{
+  "name": "my-website",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "postcss src/styles.css -o dist/styles.css",
+    "dev": "postcss src/styles.css -o dist/styles.css --watch",
+    "start": "live-server"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.4",
+    "postcss": "^8.4.38",
+    "autoprefixer": "^10.4.19",
+    "live-server": "^1.2.2",
+    "postcss-cli": "^11.0.0"
+  }
+}
