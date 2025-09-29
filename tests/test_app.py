@@ -2,6 +2,9 @@ import pytest
 from playwright.sync_api import Page, expect
 
 def test_mobile_menu_toggle(page: Page):
+    # Set a mobile viewport size
+    page.set_viewport_size({"width": 375, "height": 667})
+
     # Navigate to the local index.html file
     page.goto("file:///app/index.html")
 
