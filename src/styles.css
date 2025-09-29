@@ -1,18 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .animate-fade-up {
-    @apply transition-all duration-700 ease-out;
-    animation: fadeUp 1s forwards;
+@layer base {
+  body {
+    @apply bg-white text-gray-800 font-sans;
   }
 
-  .delay-150 { animation-delay: 0.15s; }
-  .delay-300 { animation-delay: 0.3s; }
-}
+  .dark body {
+    @apply bg-dark-background text-dark-text;
+  }
 
-@keyframes fadeUp {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+  .dark h1, .dark h2, .dark h3 {
+    @apply text-dark-heading;
+  }
+
+  .dark a {
+    @apply text-dark-primary;
+  }
 }
