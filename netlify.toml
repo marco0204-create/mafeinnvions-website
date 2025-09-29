@@ -1,0 +1,19 @@
+# This file is used to configure Netlify builds.
+# It overrides the settings in the Netlify UI.
+
+[build]
+  # The command to build the site.
+  command = "npm run build:css"
+
+# The following plugins are enabled for this site.
+# The `netlify-purge-cloudflare-on-deploy` plugin has been intentionally
+# omitted to prevent the build from failing due to missing credentials.
+
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+[[plugins]]
+  package = "netlify-plugin-visual-diff"
+
+[[plugins]]
+  package = "@algolia/netlify-plugin-crawler"
