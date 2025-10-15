@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build:css"
+  publish = "dist"
+
+# Disable the purge plugin globally by default.
+# This applies to all contexts unless overridden.
+[[plugins]]
+  package = "netlify-purge-cloudflare-on-deploy"
+  disabled = true
+
+# Override the 'disabled' input for the 'production' context.
+[context.production.plugins."netlify-purge-cloudflare-on-deploy"]
+  disabled = false
